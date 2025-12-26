@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=PT+Mono&family=Pinyon+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>AI Curriculum Quotes Generator</title>
   </head>
@@ -19,10 +20,11 @@
       </header>
 
       <main>
-        <form>
+        <form id="input-user">
           <input
             type="text"
             class="input-key-words"
+            id="input-key-words"
             placeholder="Write here your key words, e.g: peace, action, tech"
             autofocus
             required
@@ -30,11 +32,11 @@
           />
           <input type="submit" value="Create" class="input-button" />
         </form>
-        <div class="generated-answer">
+        <div class="generated-answer" id="generated-quote">
           “Be yourself; everyone else is already taken.”
           <br />
-          <div class="inpiredFromSomeone">
-            <em>Inspired from Oscar Wilde</em>
+          <div class="inpiredFromSomeone" id="inspiration">
+            <em> - Oscar Wilde</em>
           </div>
         </div>
       </main>
